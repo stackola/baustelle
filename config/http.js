@@ -9,7 +9,7 @@
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.http.html
  */
 
-module.exports.http = {
+ module.exports.http = {
 
   /****************************************************************************
   *                                                                           *
@@ -29,24 +29,24 @@ module.exports.http = {
   * router is invoked by the "router" middleware below.)                     *
   *                                                                          *
   ***************************************************************************/
-
-    // order: [
-    //   'startRequestTimer',
-    //   'cookieParser',
-    //   'session',
-    //   'myRequestLogger',
-    //   'bodyParser',
-    //   'handleBodyParserError',
-    //   'compress',
-    //   'methodOverride',
-    //   'poweredBy',
-    //   '$custom',
-    //   'router',
-    //   'www',
-    //   'favicon',
-    //   '404',
-    //   '500'
-    // ],
+  removeSubDomain: require('subdomain')({base: 'fpvheads.com'}),
+  order: [
+  'startRequestTimer',
+  'cookieParser',
+  'session',
+  'myRequestLogger',
+  'bodyParser',
+  'handleBodyParserError',
+  'compress',
+  'methodOverride',
+  'poweredBy',
+  '$custom',
+  'router',
+  'www',
+  'favicon',
+  '404',
+  '500'
+  ],
 
   /****************************************************************************
   *                                                                           *
